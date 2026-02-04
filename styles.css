@@ -2,3 +2,10 @@ p {
     text-align: center;
     color: red; 
 }
+#header {
+    color: green;
+}
+.about {
+    text-align: center;
+    color:blue;
+}
