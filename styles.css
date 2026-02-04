@@ -13,6 +13,9 @@ body {
     text-align: center;
     color:blue;
 }
+.projects {
+    background: #00b3d1;
+}
 .left {
     text-align: left;
 }
@@ -22,6 +25,4 @@ body {
 .attention {
     font-weight: bold;
 }
-.projects {
-    background: #00b3d1;
-}
+
