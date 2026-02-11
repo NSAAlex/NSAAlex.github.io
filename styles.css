@@ -1,6 +1,6 @@
 p {
     text-align: center;
-    color: rgb(229, 251, 0); 
+    color: rgb(250, 251, 0); 
 }
 body {
     background: rgb(223, 84, 233);
@@ -16,7 +16,7 @@ body {
 }
 .projects h2 {
     text-align: center;
-    background: rgb(229, 251, 0);
+    background: rgb(150, 245, 245);
 }
 .center {
     text-align: center;
