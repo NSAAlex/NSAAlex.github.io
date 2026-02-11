@@ -3,7 +3,7 @@ p {
     color: red; 
 }
 body {
-    background: blue;
+    background: rgb(223, 84, 233);
     font-family: Arial, Helvetica, sans-serif;
 }
 #header {
