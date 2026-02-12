@@ -22,6 +22,10 @@ body {
     text-align: center;
     background: rgb(150, 245, 245);
 }
+.problemstatement{
+    text-align: center;
+    background-color: rgb(150, 245, 245);
+}
 .center {
     text-align: center;
 }
