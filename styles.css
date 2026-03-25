@@ -44,3 +44,10 @@ body {
     font-weight: bold;
 }
 
+/* Project thumbnail images - matches reference site sizing */
+.project img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
