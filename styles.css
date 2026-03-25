@@ -45,8 +45,7 @@ body {
 }
 
 /* Project thumbnail images - matches reference site sizing */
-.project img
-.affinity_diagram img {
+.project img {
     width: 300px;
     max-width: 100%;
     height: auto;
