@@ -1,55 +1,219 @@
-p {
-    text-align: center;
-    color: rgb(255, 251, 0); 
-}
-body {
-    background: rgb(223, 84, 233);
-    font-family: Arial, Helvetica, sans-serif;
-}
-#header{
-    text-align: center;
-    color: rgb(255, 251, 0);
-}
-.skills{
-     text-align: center;
-    
-}
-.About_me{
-   text-align: center;
-    
-}
-.Mission_Statement{
-     text-align: center;
-    
-}
-.projects{
-    text-align: center;
-    
-}
-.Problem_Statement{
-    text-align: center;
-    
-}
-.contact{
-    text-align: center;
-   
-}
-.center {
-    text-align: center;
-}
-.green {
-    color: green;
-}
-.attention {
-    font-weight: bold;
+/* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* Project thumbnail images - matches reference site sizing */
+body {
+    background: linear-gradient(180deg, #f7f8fc 0%, #eef2ff 100%);
+    color: #1f2937;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+/* ---------- Main container ---------- */
+.container,
+main,
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 40px 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Text ---------- */
+p {
+    text-align: left;
+    color: #4b5563;
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+h1, h2, h3, h4 {
+    color: #111827;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 28px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #6366f1;
+    margin: 10px auto 0;
+    border-radius: 10px;
+}
+
+a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Header ---------- */
+#header {
+    text-align: center;
+    color: #111827;
+    margin-bottom: 28px;
+}
+
+#header p {
+    text-align: center;
+    color: #6b7280;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ---------- Section styling ---------- */
+.skills,
+.About_me,
+.Mission_Statement,
+.projects,
+.Problem_Statement,
+.contact,
+.center {
+    text-align: center;
+    margin-bottom: 36px;
+    padding: 24px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+}
+
+/* Keep paragraph text readable inside sections */
+.skills p,
+.About_me p,
+.Mission_Statement p,
+.projects p,
+.Problem_Statement p,
+.contact p,
+.center p {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto 16px;
+}
+
+/* ---------- Accent classes ---------- */
+.green {
+    color: #059669;
+}
+
+.attention {
+    font-weight: bold;
+    color: #b45309;
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+    max-width: 800px;
+    margin: 0 auto 16px;
+    padding-left: 20px;
+    color: #4b5563;
+    text-align: left;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* ---------- Images ---------- */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 14px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
 .project img {
-    width: 300px;
+    width: 320px;
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 10px auto;
-    border-radius: 8px;
+    margin: 14px auto;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+}
+
+/* ---------- Buttons if you add any ---------- */
+button,
+.btn {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+    background: #4338ca;
+    transform: translateY(-1px);
+}
+
+/* ---------- Contact section ---------- */
+.contact a {
+    word-break: break-word;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .container,
+    main,
+    .wrapper {
+        padding: 24px 18px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .skills,
+    .About_me,
+    .Mission_Statement,
+    .projects,
+    .Problem_Statement,
+    .contact,
+    .center {
+        padding: 18px;
+        margin-bottom: 24px;
+    }
 }
