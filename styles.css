@@ -11,6 +11,7 @@ body {
     background: #f8fafc;
     color: #1e293b;
     padding: 40px 20px;
+    text-align: center; /* centers everything */
 }
 
 /* ---------- Container ---------- */
@@ -45,6 +46,7 @@ section {
     border-radius: 12px;
     background: #ffffff;
     border-left: 5px solid #3b82f6;
+    text-align: center;
 }
 
 /* Alternate accent */
@@ -66,22 +68,24 @@ h3 {
     margin-bottom: 8px;
 }
 
-/* ---------- Text ---------- */
+/* ---------- Paragraphs ---------- */
 p {
-    text-align: left;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 12px auto;
     color: #475569;
-    margin-bottom: 12px;
     line-height: 1.6;
 }
 
-/* ---------- Skills ---------- */
+/* ---------- Skills List ---------- */
 ul {
-    max-width: 600px;
+    list-style-position: inside;
+    padding: 0;
     margin: 0 auto;
-    padding-left: 20px;
 }
 
 li {
+    text-align: center;
     margin-bottom: 6px;
 }
 
@@ -103,7 +107,7 @@ li {
     width: 300px;
     max-width: 100%;
     display: block;
-    margin: 10px auto;
+    margin: 12px auto;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
 }
@@ -111,7 +115,7 @@ li {
 /* Video */
 .project iframe {
     display: block;
-    margin: 10px auto;
+    margin: 12px auto;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
     max-width: 100%;
