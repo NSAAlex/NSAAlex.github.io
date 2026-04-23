@@ -8,10 +8,10 @@
 /* ---------- Body ---------- */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f8fafc;
+    background: linear-gradient(135deg, #f1f5f9, #e2e8f0); /* neutral gradient */
     color: #1e293b;
     padding: 40px 20px;
-    text-align: center; /* centers everything */
+    text-align: center;
 }
 
 /* ---------- Container ---------- */
@@ -26,7 +26,6 @@ body {
 
 /* ---------- Header ---------- */
 #header {
-    text-align: center;
     margin-bottom: 30px;
 }
 
@@ -46,31 +45,27 @@ section {
     border-radius: 12px;
     background: #ffffff;
     border-left: 5px solid #3b82f6;
-    text-align: center;
 }
 
-/* Alternate accent */
+/* Alternate accent color */
 section:nth-child(even) {
     border-left: 5px solid #14b8a6;
 }
 
 /* ---------- Headings ---------- */
 h2 {
-    text-align: center;
     margin-bottom: 12px;
     color: #1e293b;
     font-size: 1.4rem;
 }
 
 h3 {
-    text-align: center;
     color: #3b82f6;
     margin-bottom: 8px;
 }
 
 /* ---------- Paragraphs ---------- */
 p {
-    text-align: center;
     max-width: 700px;
     margin: 0 auto 12px auto;
     color: #475569;
@@ -85,7 +80,6 @@ ul {
 }
 
 li {
-    text-align: center;
     margin-bottom: 6px;
 }
 
@@ -134,7 +128,6 @@ a:hover {
 
 /* ---------- Contact ---------- */
 .contact {
-    text-align: center;
     background: #f1f5f9;
     border-left: 5px solid #3b82f6;
 }
