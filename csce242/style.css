@@ -1,0 +1,127 @@
+/* Structural */
+
+body {
+    margin: 0;
+    font-family: "Space Grotesk", Arial, sans-serif;
+    background-color: #090c0d;
+    color: #FFFFFF;
+
+
+    background: url("images/Tech (2).png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#page {
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: #1C2226;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+
+#header {
+    background-color: #400F13;
+    text-align: center;
+    padding: 45px;
+}
+
+#content {
+    padding: 40px 50px;
+}
+
+#assignments,
+#projects {
+    margin-bottom: 40px;
+}
+
+#footer {
+    background-color: #090C0D;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/*Navigation */
+
+#content ul {
+    padding-left: 25px;
+}
+
+#content li {
+    margin: 15px 0;
+}
+
+#content a {
+    color:  #73161E;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#content a:hover {
+    color: #8C7979;
+    text-decoration: underline;
+}
+
+
+/* Typography */
+
+body {
+    font-family: "Space Grotesk", Arial, sans-serif;
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+#header h2 {
+    color:  #8C7979;
+    margin-top: 10px;
+}
+
+#header p {
+    max-width: 750px;
+    margin: 20px auto 0;
+    line-height: 1.7;
+    color: #FFFFFF;
+}
+
+#content h2 {
+    color: #73161E;
+    border-bottom: 3px solid#73161E;
+    padding-bottom: 8px;
+}
+
+#footer p {
+    margin: 0;
+    color: #8C7979;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    #page {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    #header {
+        padding: 30px 20px;
+    }
+
+    #header h1 {
+        font-size: 30px;
+    }
+
+    #content {
+        padding: 30px 25px;
+    }
+}

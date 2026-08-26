@@ -1,0 +1,30 @@
+/* Structural */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(images/Swamp.webp);
+    background-size: cover;
+}
+
+#content {
+    background-color:rgba(222, 184, 135, 0.649);
+    width: 70%;
+    margin: auto;    /* Center the content */
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 10px black;
+}
+
+Header, main, footer {
+    padding: 5px;
+}
+
+header, footer {
+    background:rgba(240, 230, 140, 0.679);
+    color:rgb(0, 0, 0);
+}
+/*Navigation */
+
+/*Typography */
+h1 {
+    color:green;
+}
