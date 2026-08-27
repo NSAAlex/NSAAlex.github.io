@@ -1,0 +1,108 @@
+
+/*STRUCTURE */
+
+
+body {
+    background: url(images/Castle.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#page {
+    width: 80%;
+    max-width: 1100px;
+    margin: 40px auto;
+    background-color: #29231c;
+    border: 3px solid #b08d57;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+}
+
+header {
+    background-color: #3b1115;
+    text-align: center;
+    padding: 40px 30px;
+    border-bottom: 3px solid #b08d57;
+}
+
+main {
+    padding: 40px 50px;
+}
+
+footer {
+    background-color: #17120e;
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #b08d57;
+}
+
+
+/* TYPOGRAPHY */
+
+h1 {
+    color: #d4af67;
+    font-size: 42px;
+    margin: 0;
+}
+
+h2 {
+    color: #c5a46d;
+    font-size: 26px;
+}
+
+h3 {
+    color: #d4af67;
+    border-bottom: 2px solid #6e1b22;
+    padding-bottom: 8px;
+}
+
+p {
+    color: #f1e8d0;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+footer p {
+    color: #b8a98f;
+    font-size: 14px;
+}
+
+
+/*IMAGES */
+
+img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    padding: 8px;
+    border: 3px solid #b08d57;
+    border-radius: 6px;
+    background-color: #17120e;
+}
+
+
+/* TABLE */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #17120e;
+}
+
+th {
+    background-color: #6e1b22;
+    color: #f1e8d0;
+    padding: 15px;
+    border: 2px solid #b08d57;
+}
+
+td {
+    background-color: #29231c;
+    color: #f1e8d0;
+    padding: 15px;
+    border: 1px solid #806b4a;
+}
