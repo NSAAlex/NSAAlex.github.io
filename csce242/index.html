@@ -4,14 +4,11 @@
         <title>CSCE 242 Portfolio Page</title>
         <link rel="stylesheet" href="style.css">
     </head>
-
     <body>
         <div id="page">
-
             <header id="header">
                 <h1>CSCE 242 Portfolio Page</h1>
                 <h2>Alex Graham</h2>
-
                 <p>
                     Web Development course teaches students how to design and build
                     websites using HTML, CSS, and JavaScript. Students learn web design,
@@ -19,43 +16,69 @@
                     websites through hands-on projects.
                 </p>
             </header>
-
             <main id="content">
-
                 <section id="assignments">
                     <h2>Assignments</h2>
-
-                    <ul>
-                        <li>
-                            <a href="assignments/01html/index.html">Basic HTML</a>
-                        </li>
-                        <li>
-                            <a href="assignments/02html/index.html">Basic CSS</a>
-                        </li>
-                        <li>
-                            <a href="assignments/03flex/index.html">Page Layout with Flex</a>
-                        </li>
-                    </ul>
+                    <div class="card-row">
+                        <article class="card">
+                            <h3>Assignment 1 &ndash; Basic HTML</h3>
+                            <a href="assignments/01html/index.html">
+                                <img src="images/assignment1.png" alt="Screenshot of Basic HTML assignment">
+                            </a>
+                            <p>
+                                This assignment focused on writing clean, semantic HTML from
+                                scratch. I structured a page using proper heading levels, lists,
+                                and links before any styling was added, which forced me to think
+                                about document structure separately from appearance.
+                            </p>
+                        </article>
+                        <article class="card">
+                            <h3>Assignment 2 &ndash; Basic CSS</h3>
+                            <a href="assignments/02html/index.html">
+                                <img src="images/assignment2.png" alt="Screenshot of Basic CSS assignment">
+                            </a>
+                            <p>
+                                Here I took the HTML skeleton from Assignment 1 and applied CSS
+                                for the first time: colors, fonts, spacing, and borders. It was
+                                my first real practice separating content from presentation using
+                                an external stylesheet.
+                            </p>
+                        </article>
+                        <article class="card">
+                            <h3>Assignment 3 &ndash; Page Layout with Flex</h3>
+                            <a href="assignments/03flex/index.html">
+                                <img src="images/assignment3.png" alt="Screenshot of Flex layout assignment">
+                            </a>
+                            <p>
+                                This assignment introduced Flexbox to build a multi-column page
+                                layout. I practiced arranging sections side by side, controlling
+                                alignment and spacing, and making the layout adapt to different
+                                screen sizes.
+                            </p>
+                        </article>
+                    </div>
                 </section>
-
                 <section id="projects">
                     <h2>Projects</h2>
-
-                    <ul>
-                        <li>
-                            <a href="projects/part1/files/Tri-Shield Security.pdf">
-                                Part 1
+                    <div class="card-row">
+                        <article class="card">
+                            <h3>Part 1 &ndash; Topic Proposal</h3>
+                            <a href="projects/part1/files/Tri-Shield%20Security.pdf">
+                                <img src="images/project1.png" alt="Screenshot of Tri-Shield Security topic PDF">
                             </a>
-                        </li>
-                    </ul>
+                            <p>
+                                For my project I chose Tri-Shield Security as my topic. This
+                                first part outlines the concept and scope of the project in a
+                                short PDF proposal that lays the groundwork for the site I'll be
+                                building throughout the semester.
+                            </p>
+                        </article>
+                    </div>
                 </section>
-
             </main>
-
             <footer id="footer">
                 <p>&copy; 2026 Alex Graham. All rights reserved.</p>
             </footer>
-
         </div>
     </body>
 </html>
