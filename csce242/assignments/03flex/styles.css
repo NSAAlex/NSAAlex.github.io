@@ -1,0 +1,220 @@
+/* Base / Structure */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f0d5;
+    margin: 0;
+}
+
+#page {
+    width: 80%;
+    margin: auto;
+    background-color: #f2f0d5;
+}
+
+#header {
+    background-color: #f2f0d5;
+    padding: 20px;
+}
+
+#content {
+    padding: 5px;
+}
+
+#footer {
+    background-color: #d98282;
+    padding: 20px;
+}
+
+
+/* Navigation */
+
+#nav {
+    background-color: #d98282;
+}
+
+#nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#nav li {
+    text-align: center;
+    background-color: #d98282;
+    padding: 10px;
+}
+
+#nav a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/*Sidebar */
+
+#sidebar {
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #e8b4b4;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+#sidebar li {
+    margin-bottom: 5px;
+}
+
+#sidebar a {
+    display: block;
+    width: 95%;
+    text-align: center;
+    background-color: white;
+    color: #d98282;
+    text-decoration: none;
+    padding: 7px;
+}
+
+
+/* Cards (Title 1 / Title 2 / Title 3) */
+
+#cards {
+    padding: 5px;
+    background-color: #f2f0d5;
+}
+
+.card {
+    background-color: #a4bfb8;
+    margin: 5px;
+}
+
+.card h2 {
+    background-color: #5d878c;
+    color: white;
+    margin: 0;
+    padding: 8px;
+    text-align: center;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/*Ideas (Idea 1 / Idea 2) */
+
+.idea {
+    background-color: #5d878c;
+    margin-top: 10px;
+}
+
+.idea div {
+    padding: 15px;
+}
+
+.idea h2 {
+    color: white;
+    margin-top: 0;
+}
+
+.idea p {
+    color: white;
+}
+
+.idea img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* Typography */
+
+#header h1 {
+    text-align: center;
+    color: #5d878c;
+    font-size: 40px;
+}
+
+#sidebar h2 {
+    text-align: center;
+    color: #5d878c;
+}
+
+#footer p {
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+
+/* Responsive Design */
+
+@media (min-width: 900px) {
+    #nav ul {
+        flex-direction: row;
+    }
+
+    #nav li {
+        flex: 1;
+        border-right: 5px solid #f2f0d5;
+    }
+
+    #nav li:last-child {
+        border-right: none;
+    }
+
+    #top {
+        display: flex;
+    }
+
+    #sidebar {
+        flex: 0 0 20%;
+        width: auto;
+    }
+
+    #cards {
+        display: flex;
+        flex: 1;
+    }
+
+    .card {
+        flex: 1;
+    }
+
+    .idea {
+        display: flex;
+    }
+
+    .idea img {
+        flex: 1;
+        width: auto;
+    }
+
+    .idea div {
+        flex: 3;
+    }
+}
+
+
+@media (max-width: 899px) {
+    #top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .idea {
+        display: flex;
+        flex-direction: column;
+    }
+}
