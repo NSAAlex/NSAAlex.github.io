@@ -2,19 +2,45 @@
 <html>
     <head>
         <title>Assignment 5</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div>
-            <header>
+        <div id="content">
+            <header id="main-header">
                 <h1>Assignment 5</h1>
+                <span id="menu-dots">&bull;&bull;&bull;</span>
             </header>
             <main>
-                <h2>JavaScript</h2>
-
-
+                <h2 id="page-title">Introduction to JavaScript</h2>
+                <div class="projects">
+                    <section class="project-card" id="card-speech">
+                        <h3>Speech</h3>
+                        <div id="speech-area">
+                            <div id="speech-bubble">Hi</div>
+                        </div>
+                    </section>
+                    <section class="project-card" id="card-beverage">
+                        <h3>Beverage</h3>
+                        <label for="select-beverage">Pick your morning beverage:</label>
+                        <select id="select-beverage">
+                            <option value="" selected disabled>Choose one</option>
+                            <option value="Coffee">Coffee</option>
+                            <option value="Tea">Tea</option>
+                            <option value="Orange Juice">Orange Juice</option>
+                            <option value="Water">Water</option>
+                        </select>
+                        <p id="p-beverage-result"></p>
+                    </section>
+                    <section class="project-card" id="card-sticker">
+                        <h3>Add a Sticker</h3>
+                        <div id="sticker-area">
+                            <span id="sun-emoji">&#9728;&#65039;</span>
+                        </div>
+                    </section>
+                </div>
+                <p id="footer-credit">All rights reserved. &copy; 2026 Alex Graham. </p>
             </main>
-            <footer>
-                <p>&copy; 2026 Alex Graham. All rights reserved.</p>
-            </footer>
         </div>
+        <script src="assignment5.js"></script>
     </body>
+</html>
