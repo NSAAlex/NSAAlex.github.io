@@ -134,6 +134,11 @@ body {
     position:absolute;
 }
 
+/* Hiding*/
+.hidden {
+    display:none;
+}
+
 /*bounce animation*/
 @keyframes bounce {
    0% {bottom:75%; background: #393D3B;}
