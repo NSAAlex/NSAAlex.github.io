@@ -75,7 +75,33 @@ btnStop.onclick = () =>
 setInterval(() => {
 const pDisplay = document.getElementById("date-display");
 const today = new Date();
+const month = today.getMonth() + 1; //months are zero based 
+const day = today.getDate();
+const year = today.getFullYear();
 const seconds = today.getSeconds();
-pDisplay.innerHTML = seconds;
-
+const minutes = today.getMinutes();
+const hours = today.getHours();
+pDisplay.innerHTML = `${hours}:${minutes}:${seconds} ${month}/${day}/${year}`;
 }, 1000);
+
+
+//Navigation Toggle
+document.querySelector("#toggle-nav").onclick = (e) => {
+    document.querySelector("#main-nav ul").classList.toggle("hide-small");
+}
+
+//Doanation Thermometer
+const btnDonate = document.getElementById("btn-donate");
+const txtDonation = document.getElementById("txt-donation");
+const thermometer = document.getElementById("thermometer");
+let totalDonations = 0;
+const goal = 10000;
+
+document.getElementById("btn-donate").onclick = () => {
+    const userDoantion = parseInt(document.getElementById("txt-donation").value);
+    const donationP = document.getElementById("donation-message");
+    percentage = userDoantion / goal * 100;
+
+    donationP.innerHTML = `You donated $${userDoantion}. That is ${percentage.toFixed(2)}% of the goal!`;
+    document.querySelector(":root").style.setProperty("--donation", `${percentage}%`);
+}
