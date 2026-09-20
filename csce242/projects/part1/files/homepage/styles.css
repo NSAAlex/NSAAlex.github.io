@@ -1,15 +1,9 @@
-/* =========================================================
-   Tri-Shield Security — Stylesheet
-   Layout note: every multi-item row/column in this file
-   (nav, hero, buttons, feature strip) is built with Flexbox
-   so the structure stays easy to scan and adjust.
-   ========================================================= */
 
-/* ---------- Design tokens ---------- */
+/*Design tokens*/
 :root {
-  --bg-page:     #0a0e1c;
-  --bg-header:   #060a15;
-  --bg-strip:    #080c19;
+  --bg-page:     #0E1E3F;
+  --bg-header:   #111827;
+  --bg-strip:    #111827;
   --cyan:        #35c5e8;
   --cyan-bright: #5fd8f2;
   --blue-deep:   #1b3a8a;
@@ -23,7 +17,7 @@
   --focus-ring:  #7fe3f7;
 }
 
-/* ---------- Reset & base ---------- */
+/*Reset & base */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -57,13 +51,13 @@ a {
   outline-offset: 3px;
 }
 
-.container {
+.wrap {
   max-width: var(--max-width);
   margin: 0 auto;
   padding-inline: clamp(20px, 4vw, 48px);
 }
 
-/*  Header / Nav */
+/* ---------- Header / Nav ---------- */
 header {
   background: var(--bg-header);
   border-bottom: 1px solid var(--border-soft);
@@ -72,8 +66,8 @@ header {
   z-index: 100;
 }
 
-
-.navbar {
+/* Row = logo | nav | mobile toggle, spaced apart */
+.nav-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -82,21 +76,20 @@ header {
 }
 
 /* Logo mark + wordmark side by side */
-.site-logo {
+.brand {
   display: flex;
   align-items: center;
   gap: 14px;
   flex-shrink: 0;
 }
 
-.site-logo-img {
+.brand svg {
   width: 52px;
   height: 52px;
   flex-shrink: 0;
-  object-fit: contain;
 }
 
-.site-logo-text {
+.brand-name {
   font-family: var(--font-head);
   font-weight: 700;
   font-size: clamp(1.05rem, 1.6vw, 1.45rem);
@@ -105,18 +98,18 @@ header {
   white-space: nowrap;
 }
 
-.site-logo-text .text-highlight {
+.brand-name .accent {
   color: var(--cyan);
 }
 
 /* Nav links laid out in a row */
-nav.main-nav {
+nav.primary-nav {
   display: flex;
   align-items: center;
   gap: clamp(18px, 2.6vw, 34px);
 }
 
-nav.main-nav a {
+nav.primary-nav a {
   font-family: var(--font-head);
   font-weight: 600;
   font-size: 1rem;
@@ -128,23 +121,19 @@ nav.main-nav a {
 }
 
 /* Links only turn cyan on hover/focus */
-nav.main-nav a:hover,
-nav.main-nav a:focus-visible {
+nav.primary-nav a:hover,
+nav.primary-nav a:focus-visible {
   color: var(--cyan);
 }
 
-nav.main-nav a.nav-link-active {
+nav.primary-nav a.current {
   color: var(--cyan);
   text-decoration: underline;
   text-underline-offset: 6px;
   text-decoration-thickness: 2px;
 }
 
-.menu-toggle-checkbox {
-  display: none;
-}
-
-.menu-toggle-btn {
+.nav-toggle {
   display: none;
   background: none;
   border: 1px solid var(--border-soft);
@@ -154,31 +143,31 @@ nav.main-nav a.nav-link-active {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--text-white); 
+  color: var(--text-white);
 }
 
-.menu-toggle-btn svg {
+.nav-toggle svg {
   width: 22px;
   height: 22px;
 }
 
-/* Hero */
-.intro-section {
+/* ---------- Hero ---------- */
+.hero {
   padding-block: clamp(40px, 7vw, 84px);
 }
 
 
-.intro-grid {
+.hero-grid {
   display: flex;
   align-items: center;
   gap: clamp(32px, 5vw, 64px);
 }
 
-.intro-content {
+.hero-text {
   flex: 1 1 480px;
 }
 
-.intro-tagline {
+.eyebrow {
   font-family: var(--font-head);
   color: var(--cyan);
   font-size: clamp(0.95rem, 1.1vw, 1.05rem);
@@ -186,7 +175,7 @@ nav.main-nav a.nav-link-active {
   margin: 0 0 18px;
 }
 
-.intro-heading {
+.headline {
   font-family: var(--font-head);
   font-weight: 700;
   font-size: clamp(2.4rem, 5.2vw, 3.6rem);
@@ -196,11 +185,11 @@ nav.main-nav a.nav-link-active {
   text-transform: uppercase;
 }
 
-.intro-heading .text-highlight {
+.headline .accent {
   color: var(--cyan);
 }
 
-.intro-description {
+.hero-copy {
   color: var(--text-muted);
   font-size: clamp(1rem, 1.15vw, 1.1rem);
   line-height: 1.65;
@@ -208,7 +197,8 @@ nav.main-nav a.nav-link-active {
   margin: 0 0 34px;
 }
 
-.intro-buttons {
+/* Buttons sit side by side and wrap on narrow screens */
+.hero-ctas {
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
@@ -227,56 +217,56 @@ nav.main-nav a.nav-link-active {
   justify-content: center;
 }
 
-.btn-primary {
+.btn-solid {
   background: var(--cyan);
   color: #06101a;
   border: 2px solid var(--cyan);
 }
 
-.btn-primary:hover {
+.btn-solid:hover {
   background: var(--cyan-bright);
   border-color: var(--cyan-bright);
   transform: translateY(-1px);
 }
 
-.btn-secondary {
+.btn-outline {
   background: transparent;
   color: var(--text-white);
   border: 2px solid var(--cyan);
 }
 
-.btn-secondary:hover {
+.btn-outline:hover {
   background: rgba(53, 197, 232, 0.1);
   transform: translateY(-1px);
 }
 
-.intro-image {
+.hero-art {
   flex: 1 1 380px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.intro-image img {
+.hero-art svg {
   width: min(100%, 460px);
   height: auto;
 }
 
-/* Feature strip (Prevent / Detect / Respond) */
-.features-section {
+/*Feature strip (Prevent / Detect / Respond) */
+.feature-strip {
   background: var(--bg-strip);
   border-top: 1px solid var(--border-soft);
   padding-block: clamp(36px, 5vw, 52px);
 }
 
 /* Three feature items in a row, wraps to a column on mobile */
-.features-grid {
+.feature-grid {
   display: flex;
   flex-wrap: wrap;
   gap: clamp(24px, 4vw, 40px);
 }
 
-.feature-card {
+.feature {
   flex: 1 1 260px;
   display: flex;
   align-items: flex-start;
@@ -285,7 +275,7 @@ nav.main-nav a.nav-link-active {
   border-left: 1px solid var(--border-soft);
 }
 
-.feature-card:first-child {
+.feature:first-child {
   border-left: none;
   padding-inline-start: 0;
 }
@@ -302,14 +292,14 @@ nav.main-nav a.nav-link-active {
   height: 100%;
 }
 
-.feature-card h3 {
+.feature h3 {
   font-family: var(--font-head);
   font-weight: 600;
   font-size: 1.3rem;
   margin: 2px 0 8px;
 }
 
-.feature-card p {
+.feature p {
   color: var(--text-muted);
   font-size: 0.98rem;
   line-height: 1.5;
@@ -317,10 +307,10 @@ nav.main-nav a.nav-link-active {
   max-width: 26ch;
 }
 
-/* Responsive */
+/*Responsive*/
 @media (max-width: 980px) {
   /* Nav becomes a slide-in flex column instead of a row */
-  nav.main-nav {
+  nav.primary-nav {
     position: fixed;
     inset: 0 0 0 auto;
     top: env(safe-area-inset-top, 0px);
@@ -337,49 +327,49 @@ nav.main-nav a.nav-link-active {
     transition: transform 0.25s ease;
   }
 
-  .menu-toggle-checkbox:checked ~ nav.main-nav {
+  nav.primary-nav.open {
     transform: translateX(0);
   }
 
-  nav.main-nav a {
+  nav.primary-nav a {
     width: 100%;
     padding: 14px 4px;
     font-size: 1.1rem;
     border-bottom: 1px solid var(--border-soft);
   }
 
-  .menu-toggle-btn {
+  .nav-toggle {
     display: flex;
   }
 
  
-  .intro-grid {
+  .hero-grid {
     flex-direction: column;
     text-align: left;
   }
 
-  .intro-content,
-  .intro-image {
+  .hero-text,
+  .hero-art {
     flex: 1 1 auto;
     width: 100%;
   }
 
-  .intro-image {
+  .hero-art {
     order: -1;
   }
 
-  .intro-image img {
+  .hero-art svg {
     max-width: 320px;
   }
 
-  .intro-description {
+  .hero-copy {
     max-width: 60ch;
   }
 }
 
 @media (max-width: 720px) {
   /* Feature items stack full-width with horizontal dividers */
-  .feature-card {
+  .feature {
     flex: 1 1 100%;
     border-left: none;
     padding-inline-start: 0;
@@ -387,22 +377,22 @@ nav.main-nav a.nav-link-active {
     padding-top: 22px;
   }
 
-  .feature-card:first-child {
+  .feature:first-child {
     border-top: none;
     padding-top: 0;
   }
 
-  .intro-buttons .btn {
+  .hero-ctas .btn {
     flex: 1 1 auto;
   }
 }
 
 @media (max-width: 460px) {
-  .site-logo-text {
+  .brand-name {
     font-size: 1rem;
   }
 
-  .intro-heading {
+  .headline {
     font-size: 2rem;
   }
 }

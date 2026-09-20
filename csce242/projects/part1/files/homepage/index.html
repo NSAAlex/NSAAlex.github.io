@@ -12,13 +12,13 @@
   <body>
 
     <header>
-      <div class="container navbar">
-        <a href="#top" class="site-logo" aria-label="Tri-Shield Security home">
-          <img src="images/logo (4) (1).png" alt="Tri-Shield Security logo" class="site-logo-img">
-          <span class="site-logo-text">TRI-<span class="text-highlight">Shield</span><br>Security</span>
+      <div class="wrap nav-row">
+        <a href="#top" class="brand" aria-label="Tri-Shield Security home">
+          <img src="images/logo (4) (1).png" alt="Tri-Shield Security logo" class="brand-logo">
+          <span class="brand-name">TRI-<span class="accent">Shield</span><br>Security</span>
         </a>
 
-        <button class="menu-toggle-btn" aria-label="Toggle navigation" aria-expanded="false" id="menuToggleBtn">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" id="navToggle">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
             <line x1="3" y1="6" x2="21" y2="6"/>
             <line x1="3" y1="12" x2="21" y2="12"/>
@@ -26,8 +26,8 @@
           </svg>
         </button>
 
-        <nav class="main-nav" id="mainNav" aria-label="Primary">
-          <a href="#top" class="nav-link-active">Home</a>
+        <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+          <a href="#top" class="current">Home</a>
           <a href="#services">Services</a>
           <a href="#about">About</a>
           <a href="#threats">Cyber Threats</a>
@@ -37,31 +37,31 @@
     </header>
 
     <main id="top">
-      <section class="intro-section">
-        <div class="container intro-grid">
-          <div class="intro-content">
-            <p class="intro-tagline">Cybersecurity solutions for a safer tomorrow.</p>
-            <h1 class="intro-heading">Your security.<br><span class="text-highlight">Our shield.</span></h1>
-            <p class="intro-description">
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div class="hero-text">
+            <p class="eyebrow">Cybersecurity solutions for a safer tomorrow.</p>
+            <h1 class="headline">Your security.<br><span class="accent">Our shield.</span></h1>
+            <p class="hero-copy">
               Tri-Shield Security provides advanced cybersecurity solutions that protect
               your business from evolving digital threats. We prevent, detect, and respond —
               so you can focus on what matters most.
             </p>
-            <div class="intro-buttons">
-              <a href="#solutions" class="btn btn-primary">Get Protected</a>
-              <a href="#about" class="btn btn-secondary">Learn more</a>
+            <div class="hero-ctas">
+              <a href="#solutions" class="btn btn-solid">Get Protected</a>
+              <a href="#about" class="btn btn-outline">Learn more</a>
             </div>
           </div>
 
-          <div class="intro-image">
-            <img src="images/logo (4) (1).png" alt="Tri-Shield Security — three overlapping shields">
+          <div class="hero-art">
+            <img src="images/logo (5) (1).png" alt="Tri-Shield Security — three overlapping shields">
           </div>
         </div>
       </section>
 
-      <section class="features-section" id="services">
-        <div class="container features-grid">
-          <div class="feature-card">
+      <section class="feature-strip" id="services">
+        <div class="wrap feature-grid">
+          <div class="feature">
             <div class="feature-icon">
               <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
                 <path d="M24 5 L40 11 V23 C40 33 33 40 24 43 C15 40 8 33 8 23 V11 Z"/>
@@ -73,7 +73,7 @@
             </div>
           </div>
 
-          <div class="feature-card">
+          <div class="feature">
             <div class="feature-icon">
               <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
                 <path d="M4 24 C10 14 18 9 24 9 C30 9 38 14 44 24 C38 34 30 39 24 39 C18 39 10 34 4 24 Z"/>
@@ -86,7 +86,7 @@
             </div>
           </div>
 
-          <div class="feature-card">
+          <div class="feature">
             <div class="feature-icon">
               <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
                 <path d="M26 4 L10 27 H22 L20 44 L38 20 H26 Z"/>
