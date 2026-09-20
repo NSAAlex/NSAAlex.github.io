@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Assignment 8 - If Statements</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page">
+
+  <h1>Assignment 8</h1>
+  <h2 class="topic">If Statements</h2>
+
+  <nav class="menu">
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuItems">
+      Menu <span class="arrow">&#9660;</span>
+    </button>
+    <ul class="menu-items" id="menuItems">
+      <li><a id="navEx1" href="#">Exercise 1</a></li>
+      <li><a id="navEx2" href="#">Exercise 2</a></li>
+    </ul>
+  </nav>
+
+  <div class="card">
+
+    <!-- EXERCISE 1 -->
+    <section id="exercise1">
+      <h3>Missing Class Point Deductions</h3>
+      <label for="daysMissed">How many days do you intend to miss class?</label>
+      <input type="number" id="daysMissed" min="0" step="1" placeholder="0">
+      <p class="result" id="deductionResult"></p>
+      <p class="result" id="deductionMessage"></p>
+    </section>
+
+    <!-- EXERCISE 2 -->
+    <section id="exercise2" class="hidden">
+      <h3>End of Semester Counter</h3>
+      <p class="result" id="daysLeftResult"></p>
+      <p class="result" id="daysLeftMessage"></p>
+    </section>
+
+  </div>
+
+  <footer> All rights reserved. 2026 Alex Graham</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
