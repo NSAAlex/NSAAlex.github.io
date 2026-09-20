@@ -1,9 +1,15 @@
+/* =========================================================
+   Tri-Shield Security — Stylesheet
+   Layout note: every multi-item row/column in this file
+   (nav, hero, buttons, feature strip) is built with Flexbox
+   so the structure stays easy to scan and adjust.
+   ========================================================= */
 
 /* ---------- Design tokens ---------- */
 :root {
-  --bg-page:     #0E1E3F;
-  --bg-header:   #111827;
-  --bg-strip:    #111827;
+  --bg-page:     #0a0e1c;
+  --bg-header:   #060a15;
+  --bg-strip:    #080c19;
   --cyan:        #35c5e8;
   --cyan-bright: #5fd8f2;
   --blue-deep:   #1b3a8a;
@@ -51,13 +57,13 @@ a {
   outline-offset: 3px;
 }
 
-.wrap {
+.container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding-inline: clamp(20px, 4vw, 48px);
 }
 
-/* ---------- Header / Nav ---------- */
+/*  Header / Nav */
 header {
   background: var(--bg-header);
   border-bottom: 1px solid var(--border-soft);
@@ -66,8 +72,8 @@ header {
   z-index: 100;
 }
 
-/* Row = logo | nav | mobile toggle, spaced apart */
-.nav-row {
+
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -76,20 +82,21 @@ header {
 }
 
 /* Logo mark + wordmark side by side */
-.brand {
+.site-logo {
   display: flex;
   align-items: center;
   gap: 14px;
   flex-shrink: 0;
 }
 
-.brand svg {
+.site-logo-img {
   width: 52px;
   height: 52px;
   flex-shrink: 0;
+  object-fit: contain;
 }
 
-.brand-name {
+.site-logo-text {
   font-family: var(--font-head);
   font-weight: 700;
   font-size: clamp(1.05rem, 1.6vw, 1.45rem);
@@ -98,18 +105,18 @@ header {
   white-space: nowrap;
 }
 
-.brand-name .accent {
+.site-logo-text .text-highlight {
   color: var(--cyan);
 }
 
-/* Nav links laid out in a row (column on mobile — see media query) */
-nav.primary-nav {
+/* Nav links laid out in a row */
+nav.main-nav {
   display: flex;
   align-items: center;
   gap: clamp(18px, 2.6vw, 34px);
 }
 
-nav.primary-nav a {
+nav.main-nav a {
   font-family: var(--font-head);
   font-weight: 600;
   font-size: 1rem;
@@ -121,19 +128,23 @@ nav.primary-nav a {
 }
 
 /* Links only turn cyan on hover/focus */
-nav.primary-nav a:hover,
-nav.primary-nav a:focus-visible {
+nav.main-nav a:hover,
+nav.main-nav a:focus-visible {
   color: var(--cyan);
 }
 
-nav.primary-nav a.current {
+nav.main-nav a.nav-link-active {
   color: var(--cyan);
   text-decoration: underline;
   text-underline-offset: 6px;
   text-decoration-thickness: 2px;
 }
 
-.nav-toggle {
+.menu-toggle-checkbox {
+  display: none;
+}
+
+.menu-toggle-btn {
   display: none;
   background: none;
   border: 1px solid var(--border-soft);
@@ -143,32 +154,31 @@ nav.primary-nav a.current {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--text-white);
+  color: var(--text-white); 
 }
 
-.nav-toggle svg {
+.menu-toggle-btn svg {
   width: 22px;
   height: 22px;
 }
 
-/* ---------- Hero ---------- */
-.hero {
+/* Hero */
+.intro-section {
   padding-block: clamp(40px, 7vw, 84px);
 }
 
-/* Two-column hero: text column + art column, wraps to a
-   single column on smaller screens (see media query below) */
-.hero-grid {
+
+.intro-grid {
   display: flex;
   align-items: center;
   gap: clamp(32px, 5vw, 64px);
 }
 
-.hero-text {
+.intro-content {
   flex: 1 1 480px;
 }
 
-.eyebrow {
+.intro-tagline {
   font-family: var(--font-head);
   color: var(--cyan);
   font-size: clamp(0.95rem, 1.1vw, 1.05rem);
@@ -176,7 +186,7 @@ nav.primary-nav a.current {
   margin: 0 0 18px;
 }
 
-.headline {
+.intro-heading {
   font-family: var(--font-head);
   font-weight: 700;
   font-size: clamp(2.4rem, 5.2vw, 3.6rem);
@@ -186,11 +196,11 @@ nav.primary-nav a.current {
   text-transform: uppercase;
 }
 
-.headline .accent {
+.intro-heading .text-highlight {
   color: var(--cyan);
 }
 
-.hero-copy {
+.intro-description {
   color: var(--text-muted);
   font-size: clamp(1rem, 1.15vw, 1.1rem);
   line-height: 1.65;
@@ -198,8 +208,7 @@ nav.primary-nav a.current {
   margin: 0 0 34px;
 }
 
-/* Buttons sit side by side and wrap on narrow screens */
-.hero-ctas {
+.intro-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
@@ -218,56 +227,56 @@ nav.primary-nav a.current {
   justify-content: center;
 }
 
-.btn-solid {
+.btn-primary {
   background: var(--cyan);
   color: #06101a;
   border: 2px solid var(--cyan);
 }
 
-.btn-solid:hover {
+.btn-primary:hover {
   background: var(--cyan-bright);
   border-color: var(--cyan-bright);
   transform: translateY(-1px);
 }
 
-.btn-outline {
+.btn-secondary {
   background: transparent;
   color: var(--text-white);
   border: 2px solid var(--cyan);
 }
 
-.btn-outline:hover {
+.btn-secondary:hover {
   background: rgba(53, 197, 232, 0.1);
   transform: translateY(-1px);
 }
 
-.hero-art {
+.intro-image {
   flex: 1 1 380px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.hero-art svg {
+.intro-image img {
   width: min(100%, 460px);
   height: auto;
 }
 
-/* ---------- Feature strip (Prevent / Detect / Respond) ---------- */
-.feature-strip {
+/* Feature strip (Prevent / Detect / Respond) */
+.features-section {
   background: var(--bg-strip);
   border-top: 1px solid var(--border-soft);
   padding-block: clamp(36px, 5vw, 52px);
 }
 
 /* Three feature items in a row, wraps to a column on mobile */
-.feature-grid {
+.features-grid {
   display: flex;
   flex-wrap: wrap;
   gap: clamp(24px, 4vw, 40px);
 }
 
-.feature {
+.feature-card {
   flex: 1 1 260px;
   display: flex;
   align-items: flex-start;
@@ -276,7 +285,7 @@ nav.primary-nav a.current {
   border-left: 1px solid var(--border-soft);
 }
 
-.feature:first-child {
+.feature-card:first-child {
   border-left: none;
   padding-inline-start: 0;
 }
@@ -293,14 +302,14 @@ nav.primary-nav a.current {
   height: 100%;
 }
 
-.feature h3 {
+.feature-card h3 {
   font-family: var(--font-head);
   font-weight: 600;
   font-size: 1.3rem;
   margin: 2px 0 8px;
 }
 
-.feature p {
+.feature-card p {
   color: var(--text-muted);
   font-size: 0.98rem;
   line-height: 1.5;
@@ -308,10 +317,10 @@ nav.primary-nav a.current {
   max-width: 26ch;
 }
 
-/* ---------- Responsive ---------- */
+/* Responsive */
 @media (max-width: 980px) {
   /* Nav becomes a slide-in flex column instead of a row */
-  nav.primary-nav {
+  nav.main-nav {
     position: fixed;
     inset: 0 0 0 auto;
     top: env(safe-area-inset-top, 0px);
@@ -328,49 +337,49 @@ nav.primary-nav a.current {
     transition: transform 0.25s ease;
   }
 
-  nav.primary-nav.open {
+  .menu-toggle-checkbox:checked ~ nav.main-nav {
     transform: translateX(0);
   }
 
-  nav.primary-nav a {
+  nav.main-nav a {
     width: 100%;
     padding: 14px 4px;
     font-size: 1.1rem;
     border-bottom: 1px solid var(--border-soft);
   }
 
-  .nav-toggle {
+  .menu-toggle-btn {
     display: flex;
   }
 
-  /* Hero stacks into a single column; art moves above the text */
-  .hero-grid {
+ 
+  .intro-grid {
     flex-direction: column;
     text-align: left;
   }
 
-  .hero-text,
-  .hero-art {
+  .intro-content,
+  .intro-image {
     flex: 1 1 auto;
     width: 100%;
   }
 
-  .hero-art {
+  .intro-image {
     order: -1;
   }
 
-  .hero-art svg {
+  .intro-image img {
     max-width: 320px;
   }
 
-  .hero-copy {
+  .intro-description {
     max-width: 60ch;
   }
 }
 
 @media (max-width: 720px) {
   /* Feature items stack full-width with horizontal dividers */
-  .feature {
+  .feature-card {
     flex: 1 1 100%;
     border-left: none;
     padding-inline-start: 0;
@@ -378,22 +387,22 @@ nav.primary-nav a.current {
     padding-top: 22px;
   }
 
-  .feature:first-child {
+  .feature-card:first-child {
     border-top: none;
     padding-top: 0;
   }
 
-  .hero-ctas .btn {
+  .intro-buttons .btn {
     flex: 1 1 auto;
   }
 }
 
 @media (max-width: 460px) {
-  .brand-name {
+  .site-logo-text {
     font-size: 1rem;
   }
 
-  .headline {
+  .intro-heading {
     font-size: 2rem;
   }
 }
