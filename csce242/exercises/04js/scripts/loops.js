@@ -54,6 +54,12 @@ document.getElementById("btn-show-toys").onclick = () => {
     const toyList = document.getElementById("toy-list");
     toyList.innerHTML = "";
 
+    /*
+    for(let i = 0; i < toys.length; i++){
+        const p = document.createElement("p");
+        p.innerHTML = toys[i];
+        toyList.append(p);
+    }*/
 
     toys.forEach((toy)=>{
         const p = document.createElement("p").innerHTML;
@@ -62,19 +68,19 @@ document.getElementById("btn-show-toys").onclick = () => {
     });
 };
 
-//Show table of toys and prices
-    document.getElementById("btn-show-toy-prices").onclick = () => {
+//show a table of toys and prices
+document.getElementById("btn-show-toy-prices").onclick = () => {
     const div = document.getElementById("toy-info");
     div.innerHTML = "";
     
     const toyMap = [];
     toyMap["doll"]= 129.99;
-    toyMap["skateboard"]= 200.00;
-    toyMap["mini car"]= 1.99;
-    toyMap["board game"]= 19.24;
-    toyMap["atomic bomb"]= 1000000.00;
+    toyMap["skate board"] = 200.00;
+    toyMap["mini car"] = 1.99;
+    toyMap["board game"] = 20.99;
+    toyMap["atomic bomb"] = 19.24;
 
-     const table = document.createElement("table");
+    const table = document.createElement("table");
     div.append(table);
     table.append(createTR("Name", "Price", "th"));
 
@@ -83,15 +89,16 @@ document.getElementById("btn-show-toys").onclick = () => {
     }
 };
 
-const createTD = (data) => {
-    const td = document.createElement("td");
-    td.innerHTML = data;
-    return td;
+const createElement = (data, type) => {
+    console.log(type);
+    const elem = document.createElement(type);
+    elem.innerHTML = data;
+    return elem;
 };
 
-const createTR = (data1, data2) => {
+const createTR = (data1, data2, type) => {
     const tr = document.createElement("tr");
-    tr.append(createTD(data1));
-    tr.append(createTD(data2));
+    tr.append(createElement(data1, type));
+    tr.append(createElement(data2, type));
     return tr;
 }
