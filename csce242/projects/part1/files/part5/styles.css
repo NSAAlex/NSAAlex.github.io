@@ -1,4 +1,4 @@
-/* Colors and fonts */
+/* Colors and fonts (CSS variables)  */
 :root {
   --bg-page: #0E1E3F;
   --bg-header: #111827;
@@ -14,7 +14,7 @@
   --font-body: 'Inter', sans-serif;
 }
 
-/* Basic setup */
+/* Basic setup  */
 * {
   box-sizing: border-box;
 }
@@ -46,7 +46,7 @@ a {
   color: var(--cyan);
 }
 
-/* Small svg icons */
+/* Small svg icons (cyan outline style) */
 svg {
   fill: none;
   stroke: currentColor;
@@ -54,7 +54,7 @@ svg {
   stroke-linejoin: round;
 }
 
-/* Header and navigation */
+/*  Header and navigation  */
 header {
   background-color: var(--bg-header);
   border-bottom: 1px solid var(--border-color);
@@ -126,7 +126,7 @@ header {
   cursor: pointer;
 }
 
-/* Buttons */
+/*  Buttons  */
 .btn {
   display: inline-block;
   text-align: center;
@@ -157,7 +157,7 @@ header {
   background-color: var(--bg-card);
 }
 
-/* Homepage intro */
+/*  Homepage intro  */
 .intro-section {
   padding: 80px 0;
 }
@@ -213,7 +213,7 @@ header {
   max-width: 460px;
 }
 
-/* Homepage: Prevent / Detect / Respond */
+/*  Homepage: Prevent / Detect / Respond */
 .features-section {
   background-color: var(--bg-strip);
   border-top: 1px solid var(--border-color);
@@ -252,6 +252,14 @@ header {
   stroke-width: 2.4;
 }
 
+.feature-tag {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--cyan);
+  margin: 0 0 4px 0;
+}
+
 .feature-card h3 {
   font-family: var(--font-heading);
   font-size: 21px;
@@ -265,7 +273,7 @@ header {
   margin: 0;
 }
 
-/* Inner pages- top section (text + photo) */
+/*  Inner pages: top section (text + photo)  */
 .page-intro {
   padding: 50px 0;
   border-bottom: 1px solid var(--border-color);
@@ -291,9 +299,10 @@ header {
   height: auto;
   border-radius: 8px;
   border: 1px solid var(--border-color);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
 }
 
-/* Inner pages- content sections  */
+/* Inner pages: content sections */
 .content-section {
   padding: 56px 0;
 }
@@ -423,7 +432,7 @@ header {
   margin-top: auto;
 }
 
-/* About page- stats bar  */
+/*  About page: stats bar  */
 .stats-bar {
   background-color: var(--bg-strip);
   border-top: 1px solid var(--border-color);
@@ -475,9 +484,79 @@ header {
   font-size: 14px;
 }
 
-/*  Responsive (media queries) */
+/* Footer */
+.site-footer {
+  background-color: var(--bg-header);
+  border-top: 1px solid var(--border-color);
+  padding: 40px 0 24px 0;
+}
 
-/*  Small laptops: 6 threat cards become 3 per row */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-brand img {
+  width: 50px;
+}
+
+.footer-brand-text {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+}
+
+.footer-links h4 {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  color: var(--cyan);
+  margin: 0 0 14px 0;
+}
+
+.footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: var(--text-gray);
+  font-size: 15px;
+}
+
+.footer-links a:hover {
+  color: var(--cyan);
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  color: var(--text-gray);
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Responsive (media queries) */
+
+/* Small laptops */
 @media (max-width: 1100px) {
   .cards-6 .info-card {
     width: 31%;
@@ -563,8 +642,14 @@ header {
   }
 
   .features-grid,
-  .stats-grid {
+  .stats-grid,
+  .footer-top {
     flex-direction: column;
+  }
+
+  .footer-links {
+    gap: 30px;
+    padding-top: 20px;
   }
 
   .feature-card,
@@ -590,7 +675,7 @@ header {
   }
 }
 
-/*  Phones */
+/* Phones */
 @media (max-width: 600px) {
   .site-logo-img {
     width: 55px;
