@@ -1,0 +1,136 @@
+body {
+  background-color: #f1f1ea;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 10px 35px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: normal;
+  color: #5a8a90;
+}
+
+h2 {
+  text-align: center;
+  font-weight: normal;
+  color: #d98082;
+}
+
+/* Gallery - 4 cards per row */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #4560ad;
+  color: white;
+  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.card-header {
+  height: 100px;
+  padding-top: 10px;
+}
+
+.card-header h3 {
+  font-weight: normal;
+  font-size: 24px;
+  margin: 5px 0 15px 0;
+}
+
+.card-header p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* All images are the same size */
+.card img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Popup */
+.modal-box {
+  background-color: #d3e3f6;
+  color: #3f5aa8;
+  width: 900px;
+  max-width: 95%;
+  margin-top: 40px;
+  padding: 20px;
+  position: relative;
+}
+
+.modal-layout {
+  display: flex;
+  gap: 20px;
+}
+
+.modal-map {
+  width: 420px;
+  height: 400px;
+  border: none;
+}
+
+.modal-info {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.modal-info h2 {
+  text-align: left;
+  color: #3f5aa8;
+  margin-top: 0;
+}
+
+.modal-info p {
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  color: #5a8a90;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+/* Smaller screens */
+@media (max-width: 1000px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .modal-layout {
+    flex-direction: column;
+  }
+  .modal-map {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
