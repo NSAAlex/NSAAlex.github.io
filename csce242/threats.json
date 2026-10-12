@@ -1,0 +1,90 @@
+[
+  {
+    "_id": 1,
+    "name": "Phishing",
+    "img_name": "images/threat-phishing.png",
+    "severity": "High",
+    "category": "Social engineering",
+    "common_target": "Employee email inboxes",
+    "description": "Deceptive emails and messages designed to steal sensitive information.",
+    "how_it_works": "An attacker sends a message that looks like it came from a trusted company or coworker. It pushes you to click a link or open a file, which then steals your passwords or installs harmful software.",
+    "how_we_defend": "We filter suspicious email, add multi-factor logins so a stolen password is not enough, and train your team to spot fake messages."
+  },
+  {
+    "_id": 2,
+    "name": "Malware",
+    "img_name": "images/threat-malware.png",
+    "severity": "High",
+    "category": "Malicious software",
+    "common_target": "Computers and servers",
+    "description": "Malicious software that can damage systems, steal data, or gain unauthorized access.",
+    "how_it_works": "Malware gets onto a device through bad downloads, infected attachments, or out-of-date software. Once inside, it can spy on activity, steal files, or damage the system.",
+    "how_we_defend": "We install endpoint protection, keep software updated, and watch devices for strange behavior so infected machines are caught and cleaned quickly."
+  },
+  {
+    "_id": 3,
+    "name": "Ransomware",
+    "img_name": "images/threat-ransomware.png",
+    "severity": "Critical",
+    "category": "Extortion malware",
+    "common_target": "Company files and backups",
+    "description": "Attacks that lock your data or system until ransom is paid.",
+    "how_it_works": "Ransomware scrambles your files so you cannot open them, then demands payment for the key. Many attacks also steal a copy of the data and threaten to leak it.",
+    "how_we_defend": "We keep secure offline backups, limit what each account can access, and have a response plan ready so you can restore your data without paying."
+  },
+  {
+    "_id": 4,
+    "name": "Insider Threats",
+    "img_name": "images/threat-insider.png",
+    "severity": "Medium",
+    "category": "Internal risk",
+    "common_target": "Sensitive company data",
+    "description": "Risks that come from within an organization, whether intentional or accidental.",
+    "how_it_works": "An employee or contractor may leak data on purpose, or make an honest mistake like sending a file to the wrong person or reusing a weak password.",
+    "how_we_defend": "We give people access only to what they need, track unusual activity, and provide training that makes safe habits normal."
+  },
+  {
+    "_id": 5,
+    "name": "Cloud Threats",
+    "img_name": "images/threat-cloud.png",
+    "severity": "High",
+    "category": "Cloud security",
+    "common_target": "Cloud storage and apps",
+    "description": "Vulnerabilities that target cloud environments and stored data.",
+    "how_it_works": "Attackers look for cloud storage left open to the public, weak settings, or stolen logins, then use them to reach data stored online.",
+    "how_we_defend": "We review your cloud settings, turn on strong logins and encryption, and monitor activity so mistakes in your setup are fixed fast."
+  },
+  {
+    "_id": 6,
+    "name": "DDoS Attacks",
+    "img_name": "images/threat-ddos.png",
+    "severity": "High",
+    "category": "Network attack",
+    "common_target": "Websites and online services",
+    "description": "Overwhelming traffic designed to disrupt operations and take systems offline.",
+    "how_it_works": "A DDoS attack floods a website or server with fake traffic from many computers at once, so real customers cannot get through.",
+    "how_we_defend": "We use traffic filtering to block fake requests and have a plan to keep your service running while an attack is happening."
+  },
+  {
+    "_id": 7,
+    "name": "Social Engineering",
+    "img_name": "images/threat-social.png",
+    "severity": "Medium",
+    "category": "Human manipulation",
+    "common_target": "Employees and help desks",
+    "description": "Tricks that manipulate people into giving up access or information.",
+    "how_it_works": "Instead of hacking a computer, the attacker hacks a person. They may call pretending to be IT support, or show up pretending to be a vendor, to get inside.",
+    "how_we_defend": "We set clear steps for verifying requests, train staff to slow down and double-check, and run practice drills."
+  },
+  {
+    "_id": 8,
+    "name": "Password Attacks",
+    "img_name": "images/threat-password.png",
+    "severity": "Medium",
+    "category": "Credential attack",
+    "common_target": "User accounts",
+    "description": "Attempts to guess or steal passwords to break into accounts.",
+    "how_it_works": "Attackers try common passwords, reuse lists of passwords stolen from other breaches, or guess thousands of combinations until one works.",
+    "how_we_defend": "We require strong, unique passwords with a password manager and multi-factor login, and lock accounts that show repeated failed attempts."
+  }
+]
