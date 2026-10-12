@@ -20,21 +20,16 @@ function toggleCard() {
   }
 }
 
-// Cards that are written in the HTML (Services and Solutions pages)
-var cardButtons = document.querySelectorAll(".card-link");
-for (var i = 0; i < cardButtons.length; i++) {
-  cardButtons[i].onclick = toggleCard;
-}
-
 // Cyber Threat card feature
+
 const threatCards = document.querySelectorAll(".info-card");
 
 threatCards.forEach(function (card) {
-  const learnMore = card.querySelector(".card-link");
-  if (!learnMore) return;
+  const button = card.querySelector(".card-link");
 
-  learnMore.addEventListener("click", function () {
-    const isActive = card.classList.toggle("card-active");
-    learnMore.textContent = isActive ? "Show Less ↑" : "Learn more →";
+  if (!button) return;
+
+  button.addEventListener("click", function () {
+    card.classList.toggle("card-active");
   });
 });

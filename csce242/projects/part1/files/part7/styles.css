@@ -442,6 +442,24 @@ header {
   cursor: pointer;
 }
 
+/* JavaScript card feature */
+.card-link {
+  cursor: pointer;
+}
+
+.info-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card.card-active {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(53, 197, 232, 0.25);
+}
+
+.info-card.card-active h3 {
+  color: var(--cyan);
+}
+
 .card-link:hover {
   color: var(--cyan-light);
 }
