@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+  JSON FILE PARSING is on THIS page.
+  The data is in threats.json (8 items). threats.js reads it with fetch(),
+  loops through the list, and builds every card inside <div id="threat-list">.
+  The "Show more" buttons use toggleCard() in script.js.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cyber Threats — Tri-Shield Security</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <header>
+      <div class="container navbar">
+        <a href="index.html" class="site-logo">
+          <img src="images/logo-header.png" alt="Tri-Shield Security logo" class="site-logo-img">
+          <span class="site-logo-text">TRI-<span class="text-highlight">Shield</span><br>Security</span>
+        </a>
+
+        <button class="menu-toggle-btn" aria-label="Menu" id="menuToggleBtn">&#9776;</button>
+
+        <nav class="main-nav" id="mainNav">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="cyber-threats.html" class="nav-link-active">Cyber Threats</a>
+          <a href="solutions.html">Solutions</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <div class="container page-intro-grid">
+          <div class="page-intro-text">
+            <p class="section-eyebrow">Cyber Threats</p>
+            <h1 class="intro-heading">Know the threats.<br><span class="text-highlight">Stay ahead.</span></h1>
+            <p class="intro-description">
+              Cyber threats are constantly evolving, but knowledge is your first line of
+              defense. We help you understand the risks, stay informed, and put the right
+              protections in place to keep your business secure.
+            </p>
+            <div class="intro-buttons">
+              <a href="#threat-list" class="btn btn-primary">Learn more →</a>
+              <a href="contact.html" class="btn btn-secondary">Talk to an Expert</a>
+            </div>
+          </div>
+
+          <div class="page-intro-photo">
+            <img src="images/cyber-threats-hero.jpg" alt="Security operations center displaying global threat monitoring dashboard">
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="container">
+          <div class="section-split">
+            <div class="section-split-main">
+              <p class="section-eyebrow">Common Cyber Threats</p>
+              <h2 class="section-heading">Understand Today.<br><span class="text-highlight">Secure Tomorrow.</span></h2>
+            </div>
+
+            <div class="section-split-aside">
+              <p>
+                From ransomware to phishing, cyber threats come in many different forms.
+                Explore some of the most common threats that businesses face and learn
+                how we help defend against them.
+              </p>
+              <a href="#threat-list">View All Threats →</a>
+            </div>
+          </div>
+
+          <div class="card-grid cards-4" id="threat-list">
+            <p class="loading-text">Loading threats...</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <a href="index.html" class="footer-brand">
+          <img src="images/logo-header.png" alt="Tri-Shield Security logo">
+          <span class="footer-brand-text">TRI-<span class="text-highlight">Shield</span><br>Security</span>
+        </a>
+
+        <div class="footer-links">
+          <div>
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="cyber-threats.html">Cyber Threats</a></li>
+              <li><a href="solutions.html">Solutions</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>&copy; 2026 Tri-Shield Security. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/threats.js"></script>
+
+  </body>
+</html>
